@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Agencia</title>
+</head>
+<body>
+    <h2>MongoDB</h2>
+    <section class="form-sect">
+        <h3>FORMULARIO DE AUTOS</h3>
+        <form class="product-form" id="agency-form">
+            <div class="form-field">
+                <label for="search">Buscar auto: </label>
+                <input type="text" name="search" id="search" placeholder="Escriba la marca...">
+            </div>
+            <div class="form-field">
+                <label for="product-id">ID del auto: </label>
+                <input type="text" name="product-id" id="car-id">
+            </div>
+            <div class="form-field">
+                <label for="product-name">Marca: </label>
+                <input type="text" name="product-name" id="car-brand">
+            </div>
+            <div class="form-field">
+                <label for="product-category">Modelo: </label>
+                <select name="product-category" id="car-model"></select>
+            </div>
+            <div class="form-field">
+                <label for="product-price">Año: </label>
+                <input type="number" name="product-price" id="car-year">
+            </div>
+            <div class="form-field">
+                <label for="product-quant">Precio: </label>
+                <input type="number" name="product-quant" id="car-price">
+            </div>
+            <div class="form-field">
+                <label for="product-quant">Disponibilidad: </label>
+                <input type="text" name="product-quant" id="car-disp">
+            </div>
+        </form>
+        <div class="actions">
+                <button id="save" onclick="guardarDatos()">Guardar</button>
+                <button id="edit" onclick="botonModificar()">Modificar</button>
+                <button id="del" onclick="borrarDatos(document.getElementById('car-id').value)">Borrar</button>
+                <button id="add" onclick="botonAgregar()">Agregar</button>
+            </div>
+    </section>
+
+    <section class="visualize">
+        <div class="results">
+            <ul class="product-list" id="car-list">
+
+            </ul>
+        </div>
+    </section>
+</body>
+<script src="JS/index.js"></script>
+</html>
